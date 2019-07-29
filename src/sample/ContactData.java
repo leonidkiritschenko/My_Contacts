@@ -2,9 +2,6 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import sample.Contact;
 
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventReader;
@@ -21,7 +18,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.Optional;
 
 
 public class ContactData {
@@ -43,19 +39,10 @@ public class ContactData {
     }
 
     private ContactData() {
-        // *** initialize the contacts list here ***
-
         contacts = FXCollections.observableArrayList();
     }
-
-    // *** Add methods to add/delete/access contacts here ***
-
     public void addContact(Contact contact) {
         contacts.add(contact);
-    }
-
-    public void editContact(Contact contact) {
-        contacts.remove(contact);
     }
 
     public void deleteContact(Contact contact) {
